@@ -1,0 +1,15 @@
+Package: WeibullHM
+Type: Package
+Title: A Gibbs Sampler of a Bayesian Weibull Hidden Markov Model
+Version: 0.1
+Author: Zhifei Yan
+Description: 
+    A forward filtering backward sampling MCMC algorithm to fit a Bayesian
+    Weibull hidden Markov model
+Depends:
+    R (>= 3.0.0)
+Imports:
+    Rcpp (>= 0.11.0),
+    RcppArmadillo (>= 0.5.0)
+LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 5.0.1
