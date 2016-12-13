@@ -1,3 +1,10 @@
+#
+# sample_ref_std.R
+#
+# Created by Zhifei Yan
+# Last update 2016-12-13
+#
+
 #' Sample the standard deviation of subject random effects
 #' 
 #' Produce a Gibbs sample of the standard deviation of subject random effects in a state

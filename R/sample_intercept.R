@@ -1,3 +1,10 @@
+#
+# sample_intercept.R
+#
+# Created by Zhifei Yan
+# Last update 2016-12-13
+#
+
 #' Sample intercept effects
 #' 
 #' Produce a Gibbs sample of intercept effects of all states

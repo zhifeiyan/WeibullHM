@@ -1,3 +1,10 @@
+//
+// my_dweibull.h
+//
+// Created by Zhifei Yan
+// Last update 2016-12-13
+//
+
 #ifndef __MYDWEIBULL_H
 #define __MYDWEIBULL_H
 

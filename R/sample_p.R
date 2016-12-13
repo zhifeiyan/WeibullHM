@@ -1,3 +1,10 @@
+#
+# sample_p.R
+#
+# Created by Zhifei Yan
+# Last update 2016-12-13
+#
+
 #' Sample transition matrices of state process
 #' 
 #' Produce a Gibbs sample of transition matrices of state process under all environments of a subject

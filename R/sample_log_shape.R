@@ -1,3 +1,10 @@
+#
+# sample_log_shape.R
+#
+# Created by Zhifei Yan
+# Last update 2016-12-13
+#
+
 #' Sample Weibull log shape parameter
 #' 
 #' Produce a Gibbs sample of Weibull log shape parameter of a subject

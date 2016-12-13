@@ -1,3 +1,10 @@
+#
+# sample_log_scale.R
+#
+# Created by Zhifei Yan
+# Last update 2016-12-13
+#
+
 #' Sample Weibull log scale parameter
 #' 
 #' Produce a Gibbs sample of Weibull log scale parameter of a subject in a state

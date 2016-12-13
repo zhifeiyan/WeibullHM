@@ -1,3 +1,10 @@
+#
+# sample_q.R
+#
+# Created by Zhifei Yan
+# Last update 2016-12-13
+#
+
 # This function calculates the stationary distribution of an nstate Markov
 # chain with a transition matrix trans
 stat_dist_onechain <- function(trans, nstate) {

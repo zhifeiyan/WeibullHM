@@ -1,3 +1,10 @@
+#
+# sample_subj_ref.R
+#
+# Created by Zhifei Yan
+# Last update 2016-12-13
+#
+
 #' Sample subject random effects
 #' 
 #' Produce a Gibbs sample of subject random effect of a subject in a state

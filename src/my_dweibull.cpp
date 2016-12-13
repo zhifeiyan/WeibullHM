@@ -1,3 +1,10 @@
+//
+// my_dweibull.cpp
+//
+// Created by Zhifei Yan
+// Last update 2016-12-13
+//
+
 #include <RcppArmadillo.h>
 #include <cmath>
 

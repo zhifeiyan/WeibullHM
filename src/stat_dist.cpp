@@ -1,3 +1,10 @@
+//
+// stat_dist.cpp
+//
+// Created by Zhifei Yan
+// Last update 2016-12-13
+//
+
 #include <RcppArmadillo.h>
 
 using namespace arma;
