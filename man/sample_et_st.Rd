@@ -4,7 +4,7 @@
 \alias{sample_et_st}
 \title{Sample environment process and state process of a subject}
 \usage{
-sample_et_st(rt, wb_shape, wb_scale, p, q, e_stat, s_stat, ntrial, nstate)
+sample_et_st(rt, wb_shape, wb_scale, p, q, e_stat, s_stat, ntrial, nstate, nenv)
 }
 \arguments{
 \item{rt}{a vector of response time sequence of a subject}
@@ -24,6 +24,8 @@ sample_et_st(rt, wb_shape, wb_scale, p, q, e_stat, s_stat, ntrial, nstate)
 \item{ntrial}{total number of trials}
 
 \item{nstate}{total number of states}
+
+\item{nenv}{total number of environments}
 }
 \value{
 A list with the following components:

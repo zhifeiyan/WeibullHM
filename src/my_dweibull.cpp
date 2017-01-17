@@ -11,7 +11,7 @@
 using namespace arma;
 
 // This function evaluates the density of Weibull distribution for a vector of 
-// scale paramaters
+// scale parameters
 vec my_dweibull(double val, double shape, vec vec_scale, int log) {
   int n = vec_scale.n_elem;
   vec res(n);

@@ -2,7 +2,7 @@
 // stat_dist.cpp
 //
 // Created by Zhifei Yan
-// Last update 2016-12-13
+// Last update 2017-1-14
 //
 
 #include <RcppArmadillo.h>
@@ -14,15 +14,16 @@ using namespace arma;
 //' @param p an array of transition matrices of state process
 //' @param q a matrix of transition matrix of environment process
 //' @param nstate total number of states
+//' @param nenv   total number of environments
 //' 
 //' @return A list with the following components:
 //'   \item{e_stat}{stationary distribution of environment process}
 //'   \item{s_stat}{stationary distribution of state process}
 //' @export
 // [[Rcpp::export]]
-Rcpp::List stat_dist(arma::cube p, arma::mat q, int nstate) {
-  int d = nstate * nstate, e_prev, e_cur, s_prev, s_cur, i, j;
-  mat trans(d, d), joint_stat(nstate, nstate);
+Rcpp::List stat_dist(arma::cube p, arma::mat q, int nstate, int nenv) {
+  int d = nenv * nstate, e_prev, e_cur, s_prev, s_cur, i, j;
+  mat trans(d, d), joint_stat(nstate, nenv);
   vec b(d, fill::zeros);
   b(d - 1) = 1;
 
@@ -37,7 +38,7 @@ Rcpp::List stat_dist(arma::cube p, arma::mat q, int nstate) {
   }
   trans.diag() -= 1;
   trans.col(d - 1).ones();
-  joint_stat = reshape(solve(trans.t(), b), nstate, nstate);
+  joint_stat = reshape(solve(trans.t(), b), nstate, nenv);
 
   Rcpp::List out = Rcpp::List::create(
     Rcpp::Named("e_stat") = sum(joint_stat), 

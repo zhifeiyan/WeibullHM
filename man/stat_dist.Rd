@@ -4,7 +4,7 @@
 \alias{stat_dist}
 \title{Compute stationary distributions of environment process and state process}
 \usage{
-stat_dist(p, q, nstate)
+stat_dist(p, q, nstate, nenv)
 }
 \arguments{
 \item{p}{an array of transition matrices of state process}
@@ -12,6 +12,8 @@ stat_dist(p, q, nstate)
 \item{q}{a matrix of transition matrix of environment process}
 
 \item{nstate}{total number of states}
+
+\item{nenv}{total number of environments}
 }
 \value{
 A list with the following components:

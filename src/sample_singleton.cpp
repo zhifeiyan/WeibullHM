@@ -9,7 +9,7 @@
 
 using namespace arma;
 
-// This function generates a sample from some given discrete probability distribution
+// This function generates a sample from some given discrete probability distribution, the values are encoded as 0, 1, ..., p.n_elem - 1
 int sample_singleton(vec p) {
   int elem;
   double x, u;

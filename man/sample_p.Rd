@@ -4,13 +4,15 @@
 \alias{sample_p}
 \title{Sample transition matrices of state process}
 \usage{
-sample_p(p_all, q, prior_mat, et, st, ntrial, nstate)
+sample_p(p_all, q, prior_mat, et, st, ntrial, nstate, nenv)
 }
 \arguments{
-\item{p_all}{a matrix of current update of transition matrices of state process, 
-transition matrices under different environments are stacked vertically}
+\item{p_all}{a matrix of current update of transition matrices of 
+state process, transition matrices under different 
+environments are stacked vertically}
 
-\item{q}{a matrix of current update of transition matrix of environment process}
+\item{q}{a matrix of current update of transition matrix of 
+environment process}
 
 \item{prior_mat}{a matrix of concentration parameters of Dirichlet priors,
 each row corresponds to a row of transition matrix}
@@ -22,13 +24,15 @@ each row corresponds to a row of transition matrix}
 \item{ntrial}{total number of trials}
 
 \item{nstate}{total number of states}
+
+\item{nenv}{total number of environments}
 }
 \value{
 A list with the following components:
  \item{p}{a Gibbs sample of transition matrices of state process}
- \item{accept}{a binary indicator vector of acceptance or rejection of proposed 
-               sample of each row of transition matrices in the independent
-               Metropolis–Hastings algorithm}
+ \item{accept}{a binary indicator vector of acceptance or rejection 
+               of proposed sample of each row of transition matrices 
+               in the independent Metropolis–Hastings algorithm}
 }
 \description{
 Produce a Gibbs sample of transition matrices of state process under all environments of a subject

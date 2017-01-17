@@ -7,8 +7,8 @@
 using namespace Rcpp;
 
 // sample_et_st
-Rcpp::List sample_et_st(arma::vec rt, double wb_shape, arma::vec wb_scale, arma::cube p, arma::mat q, arma::vec e_stat, arma::vec s_stat, int ntrial, int nstate);
-RcppExport SEXP WeibullHM_sample_et_st(SEXP rtSEXP, SEXP wb_shapeSEXP, SEXP wb_scaleSEXP, SEXP pSEXP, SEXP qSEXP, SEXP e_statSEXP, SEXP s_statSEXP, SEXP ntrialSEXP, SEXP nstateSEXP) {
+Rcpp::List sample_et_st(arma::vec rt, double wb_shape, arma::vec wb_scale, arma::cube p, arma::mat q, arma::vec e_stat, arma::vec s_stat, int ntrial, int nstate, int nenv);
+RcppExport SEXP WeibullHM_sample_et_st(SEXP rtSEXP, SEXP wb_shapeSEXP, SEXP wb_scaleSEXP, SEXP pSEXP, SEXP qSEXP, SEXP e_statSEXP, SEXP s_statSEXP, SEXP ntrialSEXP, SEXP nstateSEXP, SEXP nenvSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
     Rcpp::RNGScope __rngScope;
@@ -21,20 +21,22 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< arma::vec >::type s_stat(s_statSEXP);
     Rcpp::traits::input_parameter< int >::type ntrial(ntrialSEXP);
     Rcpp::traits::input_parameter< int >::type nstate(nstateSEXP);
-    __result = Rcpp::wrap(sample_et_st(rt, wb_shape, wb_scale, p, q, e_stat, s_stat, ntrial, nstate));
+    Rcpp::traits::input_parameter< int >::type nenv(nenvSEXP);
+    __result = Rcpp::wrap(sample_et_st(rt, wb_shape, wb_scale, p, q, e_stat, s_stat, ntrial, nstate, nenv));
     return __result;
 END_RCPP
 }
 // stat_dist
-Rcpp::List stat_dist(arma::cube p, arma::mat q, int nstate);
-RcppExport SEXP WeibullHM_stat_dist(SEXP pSEXP, SEXP qSEXP, SEXP nstateSEXP) {
+Rcpp::List stat_dist(arma::cube p, arma::mat q, int nstate, int nenv);
+RcppExport SEXP WeibullHM_stat_dist(SEXP pSEXP, SEXP qSEXP, SEXP nstateSEXP, SEXP nenvSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
     Rcpp::RNGScope __rngScope;
     Rcpp::traits::input_parameter< arma::cube >::type p(pSEXP);
     Rcpp::traits::input_parameter< arma::mat >::type q(qSEXP);
     Rcpp::traits::input_parameter< int >::type nstate(nstateSEXP);
-    __result = Rcpp::wrap(stat_dist(p, q, nstate));
+    Rcpp::traits::input_parameter< int >::type nenv(nenvSEXP);
+    __result = Rcpp::wrap(stat_dist(p, q, nstate, nenv));
     return __result;
 END_RCPP
 }

@@ -14,13 +14,14 @@
 #' @param s_stat a vector of current update of stationary distribution of state process
 #' @param ntrial total number of trials
 #' @param nstate total number of states
+#' @param nenv   total number of environments
 #' 
 #' @return A list with the following components:
 #'   \item{et}{a vector of Gibbs sample of environment process}
 #'   \item{st}{a vector of Gibbs sample of state process}
 #' @export
-sample_et_st <- function(rt, wb_shape, wb_scale, p, q, e_stat, s_stat, ntrial, nstate) {
-    .Call('WeibullHM_sample_et_st', PACKAGE = 'WeibullHM', rt, wb_shape, wb_scale, p, q, e_stat, s_stat, ntrial, nstate)
+sample_et_st <- function(rt, wb_shape, wb_scale, p, q, e_stat, s_stat, ntrial, nstate, nenv) {
+    .Call('WeibullHM_sample_et_st', PACKAGE = 'WeibullHM', rt, wb_shape, wb_scale, p, q, e_stat, s_stat, ntrial, nstate, nenv)
 }
 
 #' Compute stationary distributions of environment process and state process
@@ -28,12 +29,13 @@ sample_et_st <- function(rt, wb_shape, wb_scale, p, q, e_stat, s_stat, ntrial, n
 #' @param p an array of transition matrices of state process
 #' @param q a matrix of transition matrix of environment process
 #' @param nstate total number of states
+#' @param nenv   total number of environments
 #' 
 #' @return A list with the following components:
 #'   \item{e_stat}{stationary distribution of environment process}
 #'   \item{s_stat}{stationary distribution of state process}
 #' @export
-stat_dist <- function(p, q, nstate) {
-    .Call('WeibullHM_stat_dist', PACKAGE = 'WeibullHM', p, q, nstate)
+stat_dist <- function(p, q, nstate, nenv) {
+    .Call('WeibullHM_stat_dist', PACKAGE = 'WeibullHM', p, q, nstate, nenv)
 }
 

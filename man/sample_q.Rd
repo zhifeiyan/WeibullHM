@@ -4,7 +4,7 @@
 \alias{sample_q}
 \title{Sample transition matrix of environment process}
 \usage{
-sample_q(q, et, prior, ntrial, nstate)
+sample_q(q, et, prior, ntrial, nenv)
 }
 \arguments{
 \item{q}{a matrix of current update of transition matrix of environment process}
@@ -16,14 +16,14 @@ each row corresponds to a row of transition matrix}
 
 \item{ntrial}{total number of trials}
 
-\item{nstate}{total number of states}
+\item{nenv}{total number of environments}
 }
 \value{
 A list with the following components:
  \item{q}{a Gibbs sample of transition matrix of environment process}
- \item{accept}{a binary indicator vector of acceptance or rejection of proposed 
-               sample of each row of transition matrix in the independent
-               Metropolis–Hastings algorithm}
+ \item{accept}{a binary indicator vector of acceptance or rejection 
+               of proposed sample of each row of transition matrix 
+               in the independent Metropolis–Hastings algorithm}
 }
 \description{
 Produce a Gibbs sample of transition matrix of environment process of a subject
