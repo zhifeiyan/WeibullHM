@@ -4,14 +4,14 @@
 \alias{sample_intercept}
 \title{Sample intercept effects}
 \usage{
-sample_intercept(y, alpha, sigma_lambda, m_mu, sigma_mu_inv, nsubj)
+sample_intercept(y, alpha, var_logscale, m_mu, sigma_mu_inv, nsubj)
 }
 \arguments{
 \item{y}{a matrix of current update of Weibull log scale parameters}
 
 \item{alpha}{a matrix of current update of subject random effects}
 
-\item{sigma_lambda}{a vector of standard deviations of Weibull log scale parameters}
+\item{var_logscale}{a vector of current update of variances of Weibull log scale parameters}
 
 \item{m_mu}{a vector of means of multivariate normal prior of intercept effects}
 

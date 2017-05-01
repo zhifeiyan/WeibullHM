@@ -4,7 +4,7 @@
 \alias{sample_log_scale}
 \title{Sample Weibull log scale parameter}
 \usage{
-sample_log_scale(rt, st, y, wb_shape, mu, sigma, proposal_std, s)
+sample_log_scale(rt, st, y, wb_shape, mu, var_logscale, proposal_std, s)
 }
 \arguments{
 \item{rt}{a vector of response time sequence of a subject}
@@ -17,16 +17,17 @@ sample_log_scale(rt, st, y, wb_shape, mu, sigma, proposal_std, s)
 
 \item{mu}{current value of mean of Weibull log scale parameter}
 
-\item{sigma}{a vector of standard deviations of Weibull log scale parameters}
+\item{var_logscale}{a vector of current update of variances of Weibull log scale parameters}
 
 \item{proposal_std}{a vector of random walk proposal standard deviations}
 
 \item{s}{a specific state}
 }
 \value{
-A vector whose first element is a Gibbs sample and second element 
-        is a binary indicator value of acceptance or rejection of the proposed 
-        sample in random walk Metropolis–Hastings algorithm
+A vector whose first element is a Gibbs sample and 
+        second element is a binary indicator value of acceptance 
+        or rejection of the proposed sample in random walk 
+        Metropolis–Hastings algorithm
 }
 \description{
 Produce a Gibbs sample of Weibull log scale parameter of a subject in a state

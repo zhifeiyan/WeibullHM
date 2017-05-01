@@ -4,14 +4,14 @@
 \alias{sample_subj_ref}
 \title{Sample subject random effects}
 \usage{
-sample_subj_ref(y, mu, sigma, ref_std, i, s)
+sample_subj_ref(y, mu, var_logscale, ref_std, i, s)
 }
 \arguments{
 \item{y}{a matrix of current update of Weibull log scale parameters}
 
 \item{mu}{a vector of current update of intercept effects in all states}
 
-\item{sigma}{a vector of standard deviations of Weibull log scale parameters}
+\item{var_logscale}{a vector of current update of variances of Weibull log scale parameters in all states}
 
 \item{ref_std}{a vector of current update of standard deviations of subject random effects}
 
