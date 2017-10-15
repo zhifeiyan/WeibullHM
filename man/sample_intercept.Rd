@@ -26,4 +26,3 @@ A Gibbs sample of intercept effects of all states
 \description{
 Produce a Gibbs sample of intercept effects of all states
 }
-

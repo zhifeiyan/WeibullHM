@@ -25,4 +25,3 @@ A Gibbs sample of subject random effect of a subject in a state
 \description{
 Produce a Gibbs sample of subject random effect of a subject in a state
 }
-

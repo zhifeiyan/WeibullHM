@@ -28,4 +28,3 @@ A list with the following components:
 \description{
 Produce a Gibbs sample of transition matrix of environment process of a subject
 }
-

@@ -23,4 +23,3 @@ A list with the following components:
 \description{
 Compute stationary distributions of environment process and state process
 }
-

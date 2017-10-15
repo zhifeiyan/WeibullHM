@@ -2,29 +2,32 @@
 % Please edit documentation in R/sample_std_logscale.R
 \name{sample_std_logscale}
 \alias{sample_std_logscale}
-\title{Sample the variance of Weibull log scale parameter in a state}
+\title{Sample standard deviation of Weibull log scale parameters in a given state}
 \usage{
 sample_std_logscale(log_scale, mean_log_scale, std, nsubj, prior_hc_scale,
   prop_std, s)
 }
 \arguments{
-\item{log_scale}{a vector of log Weibull scale parameters across all 
-subjects in a state}
+\item{log_scale}{a vector of Weibull log scale parameters for all subjects 
+in the given state}
 
-\item{mean_log_scale}{a vector of means of log Weibull scale parameters
-across all subjects in a state}
+\item{mean_log_scale}{a vector of means of Weibull log scale parameters
+for all subjects in the given state}
+
+\item{std}{current value of the standard deviation}
 
 \item{nsubj}{total number of subjects}
 
-\item{prior_invgamma_shape}{shape parameter of the inverse-gamma prior}
+\item{prior_hc_scale}{scale parameter of half-Cauchy prior}
 
-\item{prior_invgamma_scale}{scale parameter of the inverse-gamma prior}
+\item{prop_std}{a vector of random walk proposal standard deviations for all states}
+
+\item{s}{a specific state}
 }
 \value{
-A sample from the full conditional of the variance of Weibull log 
-        scale parameter in a state
+A sample from the full conditional of standard deviation of Weibull log 
+        scale parameter in a given state
 }
 \description{
-Produce a Gibbs sample of the variance of Weibull log scale parameter in a state
+Produce a Gibbs sample of standard deviation of Weibull log scale parameters in a given state
 }
-

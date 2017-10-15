@@ -27,4 +27,3 @@ A vector whose first element is a Gibbs sample and second element
 \description{
 Produce a Gibbs sample of the standard deviation of subject random effects in a state
 }
-

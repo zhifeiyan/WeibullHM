@@ -35,4 +35,3 @@ A list with the following components:
 \description{
 Produce a Gibbs sample of environment process and state process of a subject
 }
-

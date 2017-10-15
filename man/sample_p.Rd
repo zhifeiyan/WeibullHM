@@ -37,4 +37,3 @@ A list with the following components:
 \description{
 Produce a Gibbs sample of transition matrices of state process under all environments of a subject
 }
-

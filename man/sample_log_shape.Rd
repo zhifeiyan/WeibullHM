@@ -32,4 +32,3 @@ A vector whose first element is a Gibbs sample and second element
 \description{
 Produce a Gibbs sample of Weibull log shape parameter of a subject
 }
-

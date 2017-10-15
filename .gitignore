@@ -6,3 +6,4 @@ src/*.o
 src/*.so
 *.sublime*
 .Rproj.user
+man/.Rapp.history
